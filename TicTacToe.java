@@ -12,7 +12,6 @@ public class TicTacToe {
 
         while (isPlaying) {
             char[][] board = BoardFunctions.createBoard();
-            int turnCount = 0;
 
             BoardFunctions.printBoard(board);
 
@@ -21,23 +20,22 @@ public class TicTacToe {
                 System.out.println("\nTurn: " + current);
             
                 int[] nextMove = GetMove.askUser(scanner, board);
-                turnCount++;
                 
                 board[nextMove[0]][nextMove[1]] = current;
                 
                 BoardFunctions.printBoard(board);
                 
-                if (turnCount >= 5) {
+                if (i >= 4) {
                     int result = CheckResult.checkWin(board);
                     
-                    if (result == 3 || result == -3 || turnCount == 9) {
+                    if (Math.abs(result) == 3 || i == 8) {
                         if (result == 3) {
                             xWinsCount++;
                             System.out.print("\nX wins! ");
                         } else if (result == -3) {
                             oWinsCount++;
                             System.out.print("\nO wins! ");
-                        } else if (result != 3 && result != -3) {
+                        } else if (Math.abs(result) != 3) {
                             System.out.print("\nIt's a tie! ");
                         }
                         System.out.print("Current score:\n\n\tX = " + xWinsCount + "\n\tO = " + oWinsCount + "\n");

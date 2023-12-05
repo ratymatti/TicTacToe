@@ -44,12 +44,12 @@ public class CheckResult {
             }  
           }
   
-          if (count == 3 || count == -3) {
+          if (Math.abs(count) == 3) {
             break;
           }
         }
   
-        if (count != 3 && count != -3) {
+        if (Math.abs(count) != 3) {
           count = 0;
         }
   
@@ -70,12 +70,12 @@ public class CheckResult {
             }
           }
   
-          if (count == 3 || count == -3) {
+          if (Math.abs(count) == 3) {
             break;
           }
         }
   
-        if (count != 3 && count != -3) {
+        if (Math.abs(count) != 3) {
           count = 0;
         }
   
@@ -93,7 +93,7 @@ public class CheckResult {
           }
         }
   
-        if (count != 3 && count != -3) {
+        if (Math.abs(count) != 3) {
           count = 0;
         }
         
@@ -113,7 +113,7 @@ public class CheckResult {
           col--;
         }
   
-        if (count != 3 && count != -3) {
+        if (Math.abs(count) != 3) {
           count = 0;
         }
         
