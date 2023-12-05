@@ -31,7 +31,7 @@ This is a simple command-line-based Tic Tac Toe game implemented in Java. It all
 
 ## How to Run
 
-Compile and run the program using a Java compiler or an Integrated Development Environment (IDE) like Eclipse or IntelliJ.
+Compile and run the program using a Java compiler or an Integrated Development Environment (IDE)
 
 ```bash
 javac TicTacToe.java
