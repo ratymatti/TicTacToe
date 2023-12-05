@@ -18,6 +18,7 @@ public class TicTacToe {
 
             for (int i = 0; i < 9; i++) {
                 char current = i % 2 == 0 ? 'X' : 'O';
+                System.out.println("\nTurn: " + current);
             
                 int[] nextMove = GetMove.askUser(scanner, board);
                 turnCount++;
